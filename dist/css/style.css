@@ -1,0 +1,377 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #040404;
+  color: #fff;
+  position: relative;
+  background: transparent; }
+
+body::before {
+  content: "";
+  position: fixed;
+  background: #040404 url(../img/bg.jpg) top right no-repeat;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+input:focus,
+a:focus,
+button:focus {
+  outline: none; }
+
+img {
+  vertical-align: middle;
+  border-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.2; }
+
+.container {
+  width: 100%;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  margin-right: auto;
+  margin-left: auto; }
+
+.header * {
+  transition: ease-in-out 0.3s; }
+
+.header {
+  transition: ease-in-out 0.3s;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 997;
+  overflow-y: hidden; }
+  .header h1 {
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif; }
+  .header a,
+  .header #header h1 a:hover {
+    color: #fff;
+    line-height: 1;
+    display: inline-block; }
+  .header h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8); }
+    .header h2 span {
+      color: #fff;
+      border-bottom: 2px solid #18d26e;
+      padding-bottom: 6px; }
+  .header .nav-menu {
+    margin-top: 35px; }
+    .header .nav-menu ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .header .nav-menu ul li + li {
+        margin-left: 30px; }
+        .header .nav-menu ul li + li a {
+          display: block;
+          position: relative;
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 16px;
+          font-family: "Poppins", sans-serif;
+          font-weight: 400; }
+  .header .social-links {
+    margin-top: 40px;
+    display: flex; }
+    .header .social-links a {
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      line-height: 1;
+      margin-right: 8px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px; }
+
+.nav-menu a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #18d26e;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s; }
+
+.nav-menu .active > a:before {
+  visibility: visible;
+  width: 25px; }
+
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
+  color: #fff;
+  text-decoration: none; }
+
+.about .skills .section-title h2, #resume .container .section-title h2, .contact .container .section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif; }
+
+.about .skills .section-title h2::after, #resume .container .section-title h2::after, .contact .container .section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #4ceb95;
+  margin: 4px 10px; }
+
+.about .about-me .row, .about .about-me .row .col-text .row, .about .skills .row, #resume .container .row, .contact .container .row, .contact .container .formule .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+
+.about .about-me .row .col-img, .about .about-me .row .col-text, .about .about-me .row .col-text .row .col-lg, .about .skills .row .col-skill, #resume .container .row .col-resume, .contact .container .row .col-contact, .contact .container .formule .form-row .col-Form {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.contact .container .formule .form-row .col-Form input {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0;
+  transition: 0.3s;
+  color: #fff;
+  padding: 20px 15px;
+  font-family: inherit; }
+
+.contact .container .formule .form-row .col-Form .form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  font-weight: 400;
+  line-height: 1.5; }
+
+.about .about-me {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 30px; }
+  .about .about-me .section-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 20px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif; }
+  .about .about-me .section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #4ceb95;
+    margin: 4px 10px; }
+  .about .about-me .section-title p {
+    margin: 0;
+    margin: -15px 0 15px 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #fff; }
+  .about .about-me .row .col-img {
+    width: 36%; }
+    .about .about-me .row .col-img .img-fluid {
+      max-width: 100%;
+      height: auto; }
+  .about .about-me .row .col-text {
+    width: 61%; }
+    .about .about-me .row .col-text h3 {
+      font-weight: 700;
+      font-size: 26px;
+      color: #18d26e; }
+    .about .about-me .row .col-text .font-italic {
+      font-style: italic !important; }
+    .about .about-me .row .col-text .row .col-lg {
+      width: 50%; }
+      .about .about-me .row .col-text .row .col-lg ul {
+        list-style: none;
+        padding: 0; }
+        .about .about-me .row .col-text .row .col-lg ul li {
+          padding-bottom: 10px; }
+          .about .about-me .row .col-text .row .col-lg ul li i {
+            font-size: 20px;
+            padding-right: 2px;
+            color: #18d26e; }
+          .about .about-me .row .col-text .row .col-lg ul li b,
+          .about .about-me .row .col-text .row .col-lg ul li strong {
+            font-weight: bolder; }
+
+.about .skills {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 17px 145px; }
+  .about .skills .row .col-skill {
+    width: 50%; }
+    .about .skills .row .col-skill .progress {
+      height: 50px;
+      display: block;
+      background: none;
+      overflow: hidden;
+      line-height: 0;
+      font-size: .75rem;
+      border-radius: .25rem; }
+      .about .skills .row .col-skill .progress .skill {
+        padding: 10px 0;
+        margin: 0 0 6px 0;
+        text-transform: uppercase;
+        display: block;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        color: #fff; }
+        .about .skills .row .col-skill .progress .skill .val {
+          float: right;
+          font-style: normal; }
+      .about .skills .row .col-skill .progress .progress-bar-wrap {
+        background: rgba(255, 255, 255, 0.15); }
+        .about .skills .row .col-skill .progress .progress-bar-wrap .progress-bar {
+          height: 10px;
+          transition: .9s;
+          background-color: #18d26e; }
+
+#resume .container {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 30px; }
+  #resume .container .section-title p {
+    margin: -15px 0 15px 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #fff; }
+  #resume .container .row .col-resume {
+    width: 50%; }
+    #resume .container .row .col-resume .resume-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: #fff; }
+    #resume .container .row .col-resume .resume-item {
+      padding: 0 0 20px 20px;
+      margin-top: -2px;
+      border-left: 2px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      padding-bottom: 0 !important; }
+      #resume .container .row .col-resume .resume-item h4 {
+        line-height: 18px;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+        color: #18d26e;
+        margin-bottom: 10px; }
+      #resume .container .row .col-resume .resume-item h5 {
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 5px 15px;
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 10px; }
+      #resume .container .row .col-resume .resume-item p {
+        margin-top: 0;
+        margin-bottom: 1rem; }
+    #resume .container .row .col-resume .resume-item::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50px;
+      left: -9px;
+      top: 0;
+      background: #18d26e;
+      border: 2px solid #18d26e; }
+
+.contact .container {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 30px; }
+  .contact .container .section-title p {
+    margin: -15px 0 15px 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #fff; }
+  .contact .container .mt-2 {
+    margin-top: .5rem !important; }
+  .contact .container .row .col-contact {
+    width: 50%;
+    display: flex !important; }
+    .contact .container .row .col-contact .info-box {
+      color: #444444;
+      padding: 20px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      margin: 10px; }
+      .contact .container .row .col-contact .info-box i.bx {
+        font-size: 24px;
+        color: #18d26e;
+        border-radius: 50%;
+        padding: 14px;
+        float: left;
+        background: rgba(255, 255, 255, 0.1); }
+      .contact .container .row .col-contact .info-box h3 {
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 700;
+        margin: 10px 0 8px 68px; }
+      .contact .container .row .col-contact .info-box .social-links {
+        margin: 5px 0 0 68px;
+        display: flex; }
+      .contact .container .row .col-contact .info-box p {
+        padding: 0;
+        color: #fff;
+        line-height: 24px;
+        font-size: 14px;
+        margin: 0 0 0 68px; }
+  .contact .container .formule {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    margin-top: 1.5rem !important; }
+    .contact .container .formule .form-row .col-Form {
+      padding-right: 5px !important;
+      padding-left: 5px !important;
+      width: 50%; }
+      .contact .container .formule .form-row .col-Form .validate {
+        color: red;
+        margin: 0 0 15px 0;
+        font-weight: 400;
+        font-size: 13px; }
+    .contact .container .formule .form-row .form-group {
+      margin-bottom: 1rem; }

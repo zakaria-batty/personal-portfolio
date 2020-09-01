@@ -1,0 +1,161 @@
+.about {
+
+    // top: 100px;
+    // bottom: auto;
+    // opacity: 1;
+    // padding-bottom: 45px;
+    .about-me {
+        background: rgba(0, 0, 0, 0.9);
+        padding: 30px;
+
+        .section-title {
+            h2 {
+                font-size: 14px;
+                font-weight: 500;
+                padding: 0;
+                line-height: 1px;
+                margin: 0 0 20px 0;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: #aaaaaa;
+                font-family: "Poppins", sans-serif;
+            }
+
+            h2::after {
+                content: "";
+                width: 120px;
+                height: 1px;
+                display: inline-block;
+                background: #4ceb95;
+                margin: 4px 10px;
+            }
+
+            p {
+                margin: 0;
+                margin: -15px 0 15px 0;
+                font-size: 36px;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: "Poppins", sans-serif;
+                color: #fff;
+            }
+        }
+
+        .row {
+            @extend %row;
+
+            .col-img {
+                @extend %col;
+                width: 36%;
+
+                .img-fluid {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            .col-text {
+                @extend %col;
+                width: 61%;
+
+                h3 {
+                    font-weight: 700;
+                    font-size: 26px;
+                    color: #18d26e;
+                }
+
+                .font-italic {
+                    font-style: italic !important;
+                }
+
+                .row {
+                    @extend %row;
+
+                    .col-lg {
+                        @extend %col;
+                        width: 50%;
+
+                        ul {
+                            list-style: none;
+                            padding: 0;
+
+                            li {
+                                padding-bottom: 10px;
+
+                                i {
+                                    font-size: 20px;
+                                    padding-right: 2px;
+                                    color: #18d26e;
+                                }
+
+                                b,
+                                strong {
+                                    font-weight: bolder;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .skills {
+        background: rgba(0, 0, 0, 0.9);
+        padding: 17px 145px;
+
+        .section-title {
+            h2 {
+                @extend %title;
+            }
+
+            h2::after {
+                @extend %title_after;
+            }
+        }
+
+        .row {
+            @extend %row;
+
+            .col-skill {
+                @extend %col;
+                width: 50%;
+
+                .progress {
+                    height: 50px;
+                    display: block;
+                    background: none;
+                    overflow: hidden;
+                    line-height: 0;
+                    font-size: .75rem;
+                    border-radius: .25rem;
+
+                    .skill {
+                        padding: 10px 0;
+                        margin: 0 0 6px 0;
+                        text-transform: uppercase;
+                        display: block;
+                        font-weight: 600;
+                        font-family: "Poppins", sans-serif;
+                        color: #fff;
+
+                        .val {
+                            float: right;
+                            font-style: normal;
+                        }
+                    }
+
+                    .progress-bar-wrap {
+                        background: rgba(255, 255, 255, 0.15);
+
+                        .progress-bar {
+                            height: 10px;
+                            transition: .9s;
+                            background-color: #18d26e;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

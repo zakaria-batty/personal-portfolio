@@ -1,0 +1,115 @@
+
+.container {
+    width: 100%;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.header * {
+    transition: ease-in-out 0.3s;
+}
+
+.header {
+    transition: ease-in-out 0.3s;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 997;
+    overflow-y: hidden;
+
+    h1 {
+        font-size: 48px;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+    }
+
+    a,
+    #header h1 a:hover {
+        color: #fff;
+        line-height: 1;
+        display: inline-block;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-top: 20px;
+        color: rgba(255, 255, 255, 0.8);
+
+        span {
+            color: #fff;
+            border-bottom: 2px solid #18d26e;
+            padding-bottom: 6px;
+        }
+    }
+
+    .nav-menu {
+        margin-top: 35px;
+
+        ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li+li {
+                margin-left: 30px;
+
+                a {
+                    display: block;
+                    position: relative;
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 16px;
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 400;
+                }
+
+            }
+        }
+    }
+    .social-links {
+        margin-top: 40px;
+        display: flex;
+        a {
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            line-height: 1;
+            margin-right: 8px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+.nav-menu a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #18d26e;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu .active>a:before {
+    visibility: visible;
+    width: 25px;
+}
+
+.nav-menu a:hover,
+.nav-menu .active>a,
+.nav-menu li:hover>a {
+    color: #fff;
+    text-decoration: none;
+}

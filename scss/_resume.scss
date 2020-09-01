@@ -1,0 +1,86 @@
+#resume {
+    .container {
+        background: rgba(0, 0, 0, 0.9);
+        padding: 30px;
+
+        .section-title {
+            h2 {
+                @extend %title;
+            }
+
+            h2::after {
+                @extend %title_after;
+            }
+
+            p {
+                margin: -15px 0 15px 0;
+                font-size: 36px;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: "Poppins", sans-serif;
+                color: #fff;
+            }
+        }
+
+        .row {
+            @extend %row;
+
+            .col-resume {
+                @extend %col;
+                width: 50%;
+
+                .resume-title {
+                    font-size: 26px;
+                    font-weight: 700;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    color: #fff;
+                }
+
+                .resume-item {
+                    padding: 0 0 20px 20px;
+                    margin-top: -2px;
+                    border-left: 2px solid rgba(255, 255, 255, 0.2);
+                    position: relative;
+                    padding-bottom: 0 !important;
+
+                    h4 {
+                        line-height: 18px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        font-family: "Poppins", sans-serif;
+                        color: #18d26e;
+                        margin-bottom: 10px;
+                    }
+
+                    h5 {
+                        font-size: 16px;
+                        background: rgba(255, 255, 255, 0.15);
+                        padding: 5px 15px;
+                        display: inline-block;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        margin-top: 0;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                .resume-item::before {
+                    content: "";
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50px;
+                    left: -9px;
+                    top: 0;
+                    background: #18d26e;
+                    border: 2px solid #18d26e;
+                }
+            }
+        }
+    }
+}

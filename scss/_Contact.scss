@@ -1,0 +1,110 @@
+.contact {
+    .container {
+        background: rgba(0, 0, 0, 0.9);
+        padding: 30px;
+
+        .section-title {
+            h2 {
+                @extend %title;
+            }
+
+            h2::after {
+                @extend %title_after;
+            }
+
+            p {
+                margin: -15px 0 15px 0;
+                font-size: 36px;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: "Poppins", sans-serif;
+                color: #fff;
+            }
+        }
+
+        .mt-2 {
+            margin-top: .5rem !important;
+        }
+
+        .row {
+            @extend %row;
+
+            .col-contact {
+                @extend %col;
+                width: 50%;
+                display: flex !important;
+
+                .info-box {
+                    color: #444444;
+                    padding: 20px;
+                    width: 100%;
+                    background: rgba(255, 255, 255, 0.08);
+                    margin: 10px;
+
+                    i.bx {
+                        font-size: 24px;
+                        color: #18d26e;
+                        border-radius: 50%;
+                        padding: 14px;
+                        float: left;
+                        background: rgba(255, 255, 255, 0.1);
+                    }
+
+                    h3 {
+                        font-size: 20px;
+                        color: rgba(255, 255, 255, 0.5);
+                        font-weight: 700;
+                        margin: 10px 0 8px 68px;
+                    }
+
+                    .social-links {
+                        margin: 5px 0 0 68px;
+                        display: flex;
+                    }
+
+                    p {
+                        padding: 0;
+                        color: #fff;
+                        line-height: 24px;
+                        font-size: 14px;
+                        margin: 0 0 0 68px;
+                    }
+                }
+            }
+        }
+
+        .formule {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            margin-top: 1.5rem !important;
+
+            .form-row {
+                @extend %row;
+
+                .col-Form {
+                    @extend %col;
+                    padding-right: 5px !important;
+                    padding-left: 5px !important;
+                    width: 50%;
+
+                    input {
+                    @extend %input;
+                    }
+                    .form-control {
+                      @extend %control_input;
+                    }
+                    .validate {
+                        color: red;
+                        margin: 0 0 15px 0;
+                        font-weight: 400;
+                        font-size: 13px;
+                    }
+                }
+
+                .form-group {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
