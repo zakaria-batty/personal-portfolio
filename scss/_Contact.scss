@@ -88,11 +88,13 @@
                     width: 50%;
 
                     input {
-                    @extend %input;
+                        @extend %input;
                     }
+
                     .form-control {
-                      @extend %control_input;
+                        @extend %control_input;
                     }
+
                     .validate {
                         color: red;
                         margin: 0 0 15px 0;
@@ -101,10 +103,23 @@
                     }
                 }
 
-                .form-group {
-                    margin-bottom: 1rem;
+            }
+
+            .text-center {
+                text-align: center !important;
+
+                button {
+                    background: #18d26e;
+                    border: 0;
+                    padding: 10px 30px;
+                    color: #fff;
+                    transition: 0.4s;
+                    border-radius: 4px;
+
                 }
             }
+
+
         }
     }
 }

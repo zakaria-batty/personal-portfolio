@@ -373,5 +373,12 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0 0 15px 0;
         font-weight: 400;
         font-size: 13px; }
-    .contact .container .formule .form-row .form-group {
-      margin-bottom: 1rem; }
+    .contact .container .formule .text-center {
+      text-align: center !important; }
+      .contact .container .formule .text-center button {
+        background: #18d26e;
+        border: 0;
+        padding: 10px 30px;
+        color: #fff;
+        transition: 0.4s;
+        border-radius: 4px; }
