@@ -1,0 +1,50 @@
+#portfolio {
+    color: white !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    margin: 60px;
+    padding: 30px;
+    transition: ease-in-out 0.3s;
+
+    .container {
+        .portfolio-title {
+            padding: 15px;
+
+            h2 {
+                font-size: 14px;
+                font-weight: 500;
+                padding: 0;
+                line-height: 1px;
+                margin: 0 0 20px 0;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: #aaaaaa;
+                font-family: "Poppins", sans-serif;
+            }
+
+            h2::after {
+                content: "";
+                width: 120px;
+                height: 1px;
+                display: inline-block;
+                background: #4ceb95;
+                margin: 4px 10px;
+            }
+        }
+
+        .row {
+            .row-cols-1 {
+                .col {
+                    .card {
+                        background: #f3f2f23b !important;
+
+                        .card-body {
+                            .card-footer {
+                                background: #6d6b6b5c;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

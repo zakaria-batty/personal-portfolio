@@ -8,6 +8,7 @@ body {
     color: #fff;
     position: relative;
     background: transparent;
+    // color: white !important;
     // overflow: hidden;
 }
 
@@ -44,20 +45,19 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
     line-height: 1.2;
 }
+// section {
+//     overflow: hidden;
+//     position: absolute;
+//     width: 100%;
+//     transition: ease-in-out 0.4s;
+//     z-index: 2;
+// }
 
+@import "_mediaquery";
 @import "_header";
 @import "_mixin";
 @import "_About";
 @import "_resume";
+@import "_portfolio";
 @import "_Contact";
 
-// section {
-//     // overflow: hidden;
-//     position: absolute;
-//     width: 100%;
-//     top: 140px;
-//     bottom: 100%;
-//     opacity: 0;
-//     transition: ease-in-out 0.4s;
-//     z-index: 2;
-// }

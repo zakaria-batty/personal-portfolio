@@ -1,0 +1,192 @@
+@mixin responsive($breakpoint) {
+    @if $breakpoint==phone {
+        @media screen and (max-width: 600px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==tab-port {
+        @media screen and (max-width: 900px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==tab-lang {
+        @media screen and (max-width: 1400px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==big-desktop {
+        @media screen and (max-width: 1800px) {
+            @content
+        }
+
+        ;
+    }
+}
+
+// @include responsive(phone){
+
+// }
+
+@include responsive(phone) {
+
+    //  about
+    .about-me {
+        .section-title {
+            p {
+                font-size: 1rem !important;
+            }
+        }
+
+        .row {
+            .col-img {
+                width: 100% !important;
+            }
+
+            .col-text {
+                width: 100% !important;
+
+                h3 {
+                    font-size: 19px !important;
+                }
+
+                .font-italic {
+                    font-size: 14px !important;
+                }
+
+                .row {
+                    display: block !important;
+
+                    .col-lg {
+                        width: 100% !important;
+
+                        ul {
+                            font-size: 14px !important;
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-size: 14px !important;
+            }
+        }
+    }
+
+    .skills {
+        padding: 8px !important;
+
+        .row {
+            margin: 0 auto !important;
+
+            .col-skill {
+                width: 97% !important;
+
+                .progress {
+                    .progress-bar-wrap {
+                        width: 93% !important;
+
+                        .progress-bar {
+                            height: 4px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // resume
+    #resume {
+        .container {
+            padding: 20px !important;
+
+            .section-title {
+                h2 {
+                    font-size: 19px !important;
+                }
+
+                h2::after {}
+
+                p {
+                    font-size: 1rem !important;
+                }
+            }
+
+            .row {
+                .col-resume {
+                    width: 94% !important;
+                    margin: 0 auto !important;
+
+                    .resume-title {
+                        font-size: 19px !important;
+                    }
+
+                    .resume-item {
+                        h4 {
+                            font-size: 13px !important;
+                        }
+
+                        h5 {
+                            font-size: 13px !important;
+                        }
+
+                        p {
+                            font-size: 1rem !important;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    // contact
+    .contact {
+        transition: ease-in-out 0.3s;
+
+        .container {
+            padding: 20px !important;
+
+            .section-title {
+                p {
+                    font-size: 0.9rem !important;
+                }
+            }
+
+            .row {
+                .col-contact {
+                    width: 100% !important;
+
+                    .info-box {
+                        h3 {
+                            font-size: 19px !important;
+                        }
+
+                        p {
+                            font-size: 0.7rem !important;
+                        }
+                    }
+                }
+            }
+
+            .formule {
+                padding: 20px !important;
+
+                .form-row {
+                    .col-Form {
+                        width: 100% !important;
+                    }
+                }
+
+            }
+        }
+    }
+}

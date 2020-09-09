@@ -38,6 +38,69 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
   line-height: 1.2; }
 
+@media screen and (max-width: 600px) {
+  .about-me .section-title p {
+    font-size: 1rem !important; }
+  .about-me .row .col-img {
+    width: 100% !important; }
+  .about-me .row .col-text {
+    width: 100% !important; }
+    .about-me .row .col-text h3 {
+      font-size: 19px !important; }
+    .about-me .row .col-text .font-italic {
+      font-size: 14px !important; }
+    .about-me .row .col-text .row {
+      display: block !important; }
+      .about-me .row .col-text .row .col-lg {
+        width: 100% !important; }
+        .about-me .row .col-text .row .col-lg ul {
+          font-size: 14px !important; }
+  .about-me .row p {
+    font-size: 14px !important; }
+  .skills {
+    padding: 8px !important; }
+    .skills .row {
+      margin: 0 auto !important; }
+      .skills .row .col-skill {
+        width: 97% !important; }
+        .skills .row .col-skill .progress .progress-bar-wrap {
+          width: 93% !important; }
+          .skills .row .col-skill .progress .progress-bar-wrap .progress-bar {
+            height: 4px !important; }
+  #resume .container {
+    padding: 20px !important; }
+    #resume .container .section-title h2 {
+      font-size: 19px !important; }
+    #resume .container .section-title p {
+      font-size: 1rem !important; }
+    #resume .container .row .col-resume {
+      width: 94% !important;
+      margin: 0 auto !important; }
+      #resume .container .row .col-resume .resume-title {
+        font-size: 19px !important; }
+      #resume .container .row .col-resume .resume-item h4 {
+        font-size: 13px !important; }
+      #resume .container .row .col-resume .resume-item h5 {
+        font-size: 13px !important; }
+      #resume .container .row .col-resume .resume-item p {
+        font-size: 1rem !important; }
+  .contact {
+    transition: ease-in-out 0.3s; }
+    .contact .container {
+      padding: 20px !important; }
+      .contact .container .section-title p {
+        font-size: 0.9rem !important; }
+      .contact .container .row .col-contact {
+        width: 100% !important; }
+        .contact .container .row .col-contact .info-box h3 {
+          font-size: 19px !important; }
+        .contact .container .row .col-contact .info-box p {
+          font-size: 0.7rem !important; }
+      .contact .container .formule {
+        padding: 20px !important; }
+        .contact .container .formule .form-row .col-Form {
+          width: 100% !important; } }
+
 .container {
   width: 100%;
   padding-right: 5rem;
@@ -57,17 +120,22 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
   overflow-y: hidden; }
   .header h1 {
-    font-size: 48px;
+    font-size: 42px;
     margin: 0;
     padding: 0;
     line-height: 1;
     font-weight: 700;
     font-family: "Poppins", sans-serif; }
-  .header a,
-  .header #header h1 a:hover {
-    color: #fff;
-    line-height: 1;
-    display: inline-block; }
+    .header h1 a {
+      color: #fff;
+      line-height: 1;
+      text-decoration: none !important;
+      display: inline-block; }
+    .header h1 a:hover {
+      color: #fff;
+      line-height: 1;
+      text-decoration: none !important;
+      display: inline-block; }
   .header h2 {
     font-size: 24px;
     margin-top: 20px;
@@ -85,6 +153,9 @@ h1, h2, h3, h4, h5, h6 {
       list-style: none; }
       .header .nav-menu ul li + li {
         margin-left: 30px; }
+        .header .nav-menu ul li + li .active > a:before {
+          visibility: visible;
+          width: 25px; }
         .header .nav-menu ul li + li a {
           display: block;
           position: relative;
@@ -92,6 +163,19 @@ h1, h2, h3, h4, h5, h6 {
           font-size: 16px;
           font-family: "Poppins", sans-serif;
           font-weight: 400; }
+        .header .nav-menu ul li + li a:hover {
+          color: #18d26e; }
+        .header .nav-menu ul li + li a:before {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: -4px;
+          left: 0;
+          background-color: #18d26e;
+          visibility: hidden;
+          width: 0px;
+          transition: all 0.3s ease-in-out 0s; }
   .header .social-links {
     margin-top: 40px;
     display: flex; }
@@ -107,28 +191,16 @@ h1, h2, h3, h4, h5, h6 {
       border-radius: 50%;
       width: 40px;
       height: 40px; }
-
-.nav-menu a:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #18d26e;
-  visibility: hidden;
-  width: 0px;
-  transition: all 0.3s ease-in-out 0s; }
-
-.nav-menu .active > a:before {
-  visibility: visible;
-  width: 25px; }
-
-.nav-menu a:hover,
-.nav-menu .active > a,
-.nav-menu li:hover > a {
-  color: #fff;
-  text-decoration: none; }
+    .header .social-links a:hover {
+      color: #18d26e; }
+  .header .nav-menu .active > a:before {
+    visibility: visible;
+    width: 25px; }
+  .header .nav-menu a:hover,
+  .header .nav-menu .active > a,
+  .header .nav-menu li:hover > a {
+    color: #fff;
+    text-decoration: none; }
 
 .about .skills .section-title h2, #resume .container .section-title h2, .contact .container .section-title h2 {
   font-size: 14px;
@@ -180,7 +252,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .about .about-me {
   background: rgba(0, 0, 0, 0.9);
-  padding: 30px; }
+  padding: 30px;
+  color: white !important;
+  transition: ease-in-out 0.3s; }
   .about .about-me .section-title h2 {
     font-size: 14px;
     font-weight: 500;
@@ -265,120 +339,208 @@ h1, h2, h3, h4, h5, h6 {
           transition: .9s;
           background-color: #18d26e; }
 
-#resume .container {
-  background: rgba(0, 0, 0, 0.9);
-  padding: 30px; }
-  #resume .container .section-title p {
-    margin: -15px 0 15px 0;
-    font-size: 36px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    color: #fff; }
-  #resume .container .row .col-resume {
-    width: 50%; }
-    #resume .container .row .col-resume .resume-title {
-      font-size: 26px;
+#resume {
+  color: white !important;
+  transition: ease-in-out 0.3s; }
+  #resume .container {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px; }
+    #resume .container .section-title p {
+      margin: -15px 0 15px 0;
+      font-size: 36px;
       font-weight: 700;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-family: "Poppins", sans-serif;
       color: #fff; }
-    #resume .container .row .col-resume .resume-item {
-      padding: 0 0 20px 20px;
-      margin-top: -2px;
-      border-left: 2px solid rgba(255, 255, 255, 0.2);
-      position: relative;
-      padding-bottom: 0 !important; }
-      #resume .container .row .col-resume .resume-item h4 {
-        line-height: 18px;
-        font-size: 18px;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-family: "Poppins", sans-serif;
-        color: #18d26e;
-        margin-bottom: 10px; }
-      #resume .container .row .col-resume .resume-item h5 {
-        font-size: 16px;
-        background: rgba(255, 255, 255, 0.15);
-        padding: 5px 15px;
-        display: inline-block;
-        font-weight: 600;
-        margin-bottom: 10px; }
-      #resume .container .row .col-resume .resume-item p {
-        margin-top: 0;
-        margin-bottom: 1rem; }
-    #resume .container .row .col-resume .resume-item::before {
-      content: "";
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      border-radius: 50px;
-      left: -9px;
-      top: 0;
-      background: #18d26e;
-      border: 2px solid #18d26e; }
-
-.contact .container {
-  background: rgba(0, 0, 0, 0.9);
-  padding: 30px; }
-  .contact .container .section-title p {
-    margin: -15px 0 15px 0;
-    font-size: 36px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    color: #fff; }
-  .contact .container .mt-2 {
-    margin-top: .5rem !important; }
-  .contact .container .row .col-contact {
-    width: 50%;
-    display: flex !important; }
-    .contact .container .row .col-contact .info-box {
-      color: #444444;
-      padding: 20px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.08);
-      margin: 10px; }
-      .contact .container .row .col-contact .info-box i.bx {
-        font-size: 24px;
-        color: #18d26e;
-        border-radius: 50%;
-        padding: 14px;
-        float: left;
-        background: rgba(255, 255, 255, 0.1); }
-      .contact .container .row .col-contact .info-box h3 {
-        font-size: 20px;
-        color: rgba(255, 255, 255, 0.5);
-        font-weight: 700;
-        margin: 10px 0 8px 68px; }
-      .contact .container .row .col-contact .info-box .social-links {
-        margin: 5px 0 0 68px;
-        display: flex; }
-      .contact .container .row .col-contact .info-box p {
-        padding: 0;
-        color: #fff;
-        line-height: 24px;
-        font-size: 14px;
-        margin: 0 0 0 68px; }
-  .contact .container .formule {
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.08);
-    margin-top: 1.5rem !important; }
-    .contact .container .formule .form-row .col-Form {
-      padding-right: 5px !important;
-      padding-left: 5px !important;
+    #resume .container .row .col-resume {
       width: 50%; }
-      .contact .container .formule .form-row .col-Form .validate {
-        color: red;
-        margin: 0 0 15px 0;
-        font-weight: 400;
-        font-size: 13px; }
-    .contact .container .formule .text-center {
-      text-align: center !important; }
-      .contact .container .formule .text-center button {
+      #resume .container .row .col-resume .resume-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #fff; }
+      #resume .container .row .col-resume .resume-item {
+        padding: 0 0 20px 20px;
+        margin-top: -2px;
+        border-left: 2px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        padding-bottom: 0 !important; }
+        #resume .container .row .col-resume .resume-item h4 {
+          line-height: 18px;
+          font-size: 18px;
+          font-weight: 600;
+          text-transform: uppercase;
+          font-family: "Poppins", sans-serif;
+          color: #18d26e;
+          margin-bottom: 10px; }
+        #resume .container .row .col-resume .resume-item h5 {
+          font-size: 16px;
+          background: rgba(255, 255, 255, 0.15);
+          padding: 5px 15px;
+          display: inline-block;
+          font-weight: 600;
+          margin-bottom: 10px; }
+        #resume .container .row .col-resume .resume-item p {
+          margin-top: 0;
+          margin-bottom: 1rem; }
+      #resume .container .row .col-resume .resume-item::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50px;
+        left: -9px;
+        top: 0;
         background: #18d26e;
-        border: 0;
-        padding: 10px 30px;
-        color: #fff;
-        transition: 0.4s;
-        border-radius: 4px; }
+        border: 2px solid #18d26e; }
+
+#portfolio {
+  color: white !important;
+  background: rgba(0, 0, 0, 0.9) !important;
+  margin: 60px;
+  padding: 30px;
+  transition: ease-in-out 0.3s; }
+  #portfolio .container .portfolio-title {
+    padding: 15px; }
+    #portfolio .container .portfolio-title h2 {
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0;
+      line-height: 1px;
+      margin: 0 0 20px 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #aaaaaa;
+      font-family: "Poppins", sans-serif; }
+    #portfolio .container .portfolio-title h2::after {
+      content: "";
+      width: 120px;
+      height: 1px;
+      display: inline-block;
+      background: #4ceb95;
+      margin: 4px 10px; }
+  #portfolio .container .row .row-cols-1 .col .card {
+    background: #f3f2f23b !important; }
+    #portfolio .container .row .row-cols-1 .col .card .card-body .card-footer {
+      background: #6d6b6b5c; }
+
+.contact {
+  transition: ease-in-out 0.3s; }
+  .contact .container {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px; }
+    .contact .container .section-title p {
+      margin: -15px 0 15px 0;
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: "Poppins", sans-serif;
+      color: #fff; }
+    .contact .container .mt-2 {
+      margin-top: .5rem !important; }
+    .contact .container .row .col-contact {
+      width: 50%;
+      display: flex !important; }
+      .contact .container .row .col-contact .info-box {
+        color: #444444;
+        padding: 20px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.08);
+        margin: 10px; }
+        .contact .container .row .col-contact .info-box i.bx {
+          font-size: 24px;
+          color: #18d26e;
+          border-radius: 50%;
+          padding: 14px;
+          float: left;
+          background: rgba(255, 255, 255, 0.1); }
+        .contact .container .row .col-contact .info-box h3 {
+          font-size: 20px;
+          color: rgba(255, 255, 255, 0.5);
+          font-weight: 700;
+          margin: 10px 0 8px 68px; }
+        .contact .container .row .col-contact .info-box .social-links {
+          margin-top: 40px;
+          display: flex; }
+          .contact .container .row .col-contact .info-box .social-links a {
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            line-height: 1;
+            margin-right: 8px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px; }
+          .contact .container .row .col-contact .info-box .social-links a:hover {
+            color: #18d26e; }
+        .contact .container .row .col-contact .info-box p {
+          padding: 0;
+          color: #fff;
+          line-height: 24px;
+          font-size: 14px;
+          margin: 0 0 0 68px; }
+    .contact .container .formule {
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      margin-top: 1.5rem !important; }
+      .contact .container .formule .form-row .col-Form {
+        padding-right: 16px !important;
+        padding-left: 15px !important;
+        width: 50%; }
+        .contact .container .formule .form-row .col-Form .validate {
+          color: red;
+          margin: 0 0 15px 0;
+          font-weight: 400;
+          font-size: 13px; }
+      .contact .container .formule .form-grp {
+        margin-bottom: 1rem; }
+        .contact .container .formule .form-grp input {
+          border-radius: 0;
+          box-shadow: none;
+          background: rgba(255, 255, 255, 0.08);
+          border: 0;
+          transition: 0.3s;
+          color: #fff;
+          display: block;
+          width: 100%;
+          height: calc(1.5em + .75rem + 2px);
+          padding: .375rem .75rem;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5; }
+        .contact .container .formule .form-grp .textarea {
+          width: 100%;
+          border-radius: 0;
+          box-shadow: none;
+          font-size: 14px;
+          background: rgba(255, 255, 255, 0.08);
+          border: 0;
+          transition: 0.3s;
+          color: #fff;
+          padding: 12px 15px; }
+      .contact .container .formule .text-center {
+        text-align: center !important; }
+        .contact .container .formule .text-center button {
+          background: #18d26e;
+          border: 0;
+          padding: 10px 30px;
+          color: #fff;
+          transition: 0.4s;
+          border-radius: 4px; }
+  .contact .credits {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    text-align: right;
+    font-size: 13px;
+    color: #fff;
+    z-index: 1; }
+    .contact .credits a {
+      color: #18d26e;
+      transition: 0.3s; }
