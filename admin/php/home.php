@@ -20,8 +20,8 @@ if (isset($_GET['msg'])) {
 ?>
 <form method="post" action="php/uhome.php" enctype="multipart/form-data">
   <div class="form-row">
-    <div class="form-group col-md-6">
-      <img src="../assets/img/<?= $data['profilepic'] ?>" class="oo img-thumbnail"><br>
+    <!-- <div class="form-group col-md-6">
+      <img src="../dist/img/" class="oo img-thumbnail"><br>
       <label>Profile Pic (Minimum 600px X 600px, Maxsize 2mb)</label>
       <div class="custom-file">
         <input type="file" name="profile" class="custom-file-input" id="profilepic">
@@ -29,20 +29,18 @@ if (isset($_GET['msg'])) {
       </div>
     </div>
     <div class="form-group col-md-6">
-      <img src="../assets/img/<?= $data['homewallpaper'] ?>" class="oo img-thumbnail">
+      <img src="../dist/img/" class="oo img-thumbnail">
       <label>Home Cover (Minimum 1920 X 1280, Maxsize 2mb)</label>
       <div class="custom-file">
         <input type="file" name="cover" class="custom-file-input" id="profilepic">
         <label class="custom-file-label" for="profilepic">Choose Home Cover...</label>
       </div>
-    </div>
+    </div> -->
 
     <div class="form-group col-md-6">
       <label for="name">Name</label>
       <input type="name" name="name" value="<?= $data['name'] ?>" class="form-control" id="name" placeholder="zakaria batty">
     </div>
-
-
 
     <div class="form-group col-md-6">
       <label for="email">Email</label>

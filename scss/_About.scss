@@ -1,3 +1,4 @@
+
 .about {
     .about-me {
         background: rgba(0, 0, 0, 0.9);
@@ -111,7 +112,7 @@
             }
         }
 
-        .row {
+        .row-skills {
             @extend %row;
 
             .col-skill {

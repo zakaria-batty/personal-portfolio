@@ -81,12 +81,6 @@ $data = mysqli_fetch_array($queryrun);
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="?editseo=true">
-                <span data-feather="at-sign"></span>
-                Edit SEO
-              </a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="?edithome=true">
                 <span data-feather="home"></span>
                 Edit Home
@@ -139,8 +133,6 @@ $data = mysqli_fetch_array($queryrun);
           include('php/resume.php'); //resume
         } else if (isset($_GET['editportfolio'])) {
           include('php/portfolio.php'); //portfolio
-        } else if (isset($_GET['editseo'])) {
-          include('php/seo.php');
         } else if (isset($_GET['editprofile'])) { ?>
           <h2>Edit Profile</h2>
           <?php

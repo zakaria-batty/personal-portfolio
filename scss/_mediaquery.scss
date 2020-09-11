@@ -8,22 +8,15 @@
     }
 
     @if $breakpoint==tab-port {
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1000px) {
             @content
         }
 
         ;
     }
 
-    @if $breakpoint==tab-lang {
-        @media screen and (max-width: 1400px) {
-            @content
-        }
 
-        ;
-    }
-
-    @if $breakpoint==big-desktop {
+    @if $breakpoint==bigdesktop {
         @media screen and (max-width: 1800px) {
             @content
         }
@@ -31,10 +24,6 @@
         ;
     }
 }
-
-// @include responsive(phone){
-
-// }
 
 @include responsive(phone) {
 
@@ -84,11 +73,11 @@
     .skills {
         padding: 8px !important;
 
-        .row {
+        .row-skills {
             margin: 0 auto !important;
 
             .col-skill {
-                width: 97% !important;
+                width: 100% !important;
 
                 .progress {
                     .progress-bar-wrap {
@@ -112,8 +101,6 @@
                 h2 {
                     font-size: 19px !important;
                 }
-
-                h2::after {}
 
                 p {
                     font-size: 1rem !important;
@@ -190,3 +177,28 @@
         }
     }
 }
+
+;
+
+@include responsive(tab-porte) {
+
+    //  about
+    .about-me {
+
+        .row {
+            .col-img {
+                width: 100% !important;
+            }
+
+            .col-text {
+                width: 100% !important;
+            }
+
+            p {
+                font-size: 14px !important;
+            }
+        }
+    }
+}
+
+;

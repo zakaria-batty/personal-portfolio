@@ -30,21 +30,21 @@ $Call = mysqli_fetch_array($runquery);
 
 
 <body>
-
+    <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>
     <!-- ======= Header ======= -->
-    <header id="header" class="header">
+    <header id="header" class="header ">
         <div class="container">
 
             <h1><a href="index.html"><?= $Call['name'] ?></a></h1>
             <h2>I'm developper <span>graphic designer</span> from morroc</h2>
 
-            <nav class="nav-menu">
+            <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="active"><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li id="Home_menu" class="active"><a href="#header">Home</a></li>
+                    <li id="about_menu"><a href="#about">About</a></li>
+                    <li id="resume_menu"><a href="#resume">Resume</a></li>
+                    <li id="portfolio_menu"><a href="#portfolio">Portfolio</a></li>
+                    <li id="contact_menu"><a href="#contact">Contact</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
 
@@ -57,7 +57,7 @@ $Call = mysqli_fetch_array($runquery);
     <!-- End Header -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about sect">
 
         <!-- ======= About Me ======= -->
         <div class="about-me container">
@@ -106,25 +106,25 @@ $Call = mysqli_fetch_array($runquery);
                 <h2>Skills</h2>
             </div>
 
-            <div class="row ">
-
-                <div class="col-skill">
-                    <?php
-                    $q_skills = "SELECT * FROM skills";
-                    $run_skills = mysqli_query($db, $q_skills);
-                    while ($Callupskills = mysqli_fetch_array($run_skills)) {
-                    ?>
+            <div class="row-skills">
+                <?php
+                $q_skills = "SELECT * FROM skills";
+                $run_skills = mysqli_query($db, $q_skills);
+                while ($Callupskills = mysqli_fetch_array($run_skills)) {
+                ?>
+                    <div class="col-skill">
                         <div class="progress">
                             <span class="skill"><?= $Callupskills['skill'] ?> <i class="val"><?= $Callupskills['score'] ?>%</i></span>
                             <div class="progress-bar-wrap">
                                 <div class="progress-bar" role="progressbar" style="width:<?= $Callupskills['score'] ?>;"></div>
                             </div>
                         </div>
-                    <?php
-                    }
-                    ?>
+                    </div>
+                <?php
+                }
+                ?>
 
-                </div>
+
             </div>
 
         </div><!-- End Skills -->
@@ -132,7 +132,7 @@ $Call = mysqli_fetch_array($runquery);
     <!-- End About Section -->
 
     <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
+    <section id="resume" class="resume sect">
         <div class="container">
 
             <div class="section-title">
@@ -183,7 +183,7 @@ $Call = mysqli_fetch_array($runquery);
 
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
+    <section id="portfolio" class="portfolio sect section-bg">
         <div class="container">
 
             <div class="portfolio-title">
@@ -254,7 +254,7 @@ $Call = mysqli_fetch_array($runquery);
     <!-- End Portfolio Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact sect">
         <div class="container">
 
             <div class="section-title">
@@ -332,7 +332,6 @@ $Call = mysqli_fetch_array($runquery);
 
 
     <script src="dist/js/main.js"></script>
-    <script src="dist/vendor/jquery/jquery.min.js"></script>
 </body>
 
 </html>

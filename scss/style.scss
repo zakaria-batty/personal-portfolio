@@ -8,8 +8,6 @@ body {
     color: #fff;
     position: relative;
     background: transparent;
-    // color: white !important;
-    // overflow: hidden;
 }
 
 body::before {
@@ -22,6 +20,23 @@ body::before {
     top: 0;
     height: 100vh;
     z-index: -1;
+}
+
+.sect {
+    overflow: hidden ;
+    position: absolute ;
+    width: 100% ;
+    top: 140px ;
+    bottom: 100% ;
+    opacity: 0 ;
+    transition: ease-in-out 0.4s ;
+    z-index: 2 ;
+}
+.sect.section-show {
+    top: 100px !important;
+    bottom: auto !important;
+    opacity: 1 !important;
+    padding-bottom: 45px !important;
 }
 
 a {
@@ -37,21 +52,21 @@ a:focus,
 button:focus {
     outline: none;
 }
+
 img {
     vertical-align: middle;
     border-style: none;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Raleway", sans-serif;
     line-height: 1.2;
 }
-// section {
-//     overflow: hidden;
-//     position: absolute;
-//     width: 100%;
-//     transition: ease-in-out 0.4s;
-//     z-index: 2;
-// }
 
 @import "_mediaquery";
 @import "_header";
@@ -60,4 +75,3 @@ h1, h2, h3, h4, h5, h6 {
 @import "_resume";
 @import "_portfolio";
 @import "_Contact";
-

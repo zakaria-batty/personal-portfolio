@@ -19,6 +19,22 @@ body::before {
   height: 100vh;
   z-index: -1; }
 
+.sect {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 140px;
+  bottom: 100%;
+  opacity: 0;
+  transition: ease-in-out 0.4s;
+  z-index: 2; }
+
+.sect.section-show {
+  top: 100px !important;
+  bottom: auto !important;
+  opacity: 1 !important;
+  padding-bottom: 45px !important; }
+
 a {
   text-decoration: none; }
 
@@ -34,7 +50,12 @@ img {
   vertical-align: middle;
   border-style: none; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", sans-serif;
   line-height: 1.2; }
 
@@ -59,13 +80,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px !important; }
   .skills {
     padding: 8px !important; }
-    .skills .row {
+    .skills .row-skills {
       margin: 0 auto !important; }
-      .skills .row .col-skill {
-        width: 97% !important; }
-        .skills .row .col-skill .progress .progress-bar-wrap {
+      .skills .row-skills .col-skill {
+        width: 100% !important; }
+        .skills .row-skills .col-skill .progress .progress-bar-wrap {
           width: 93% !important; }
-          .skills .row .col-skill .progress .progress-bar-wrap .progress-bar {
+          .skills .row-skills .col-skill .progress .progress-bar-wrap .progress-bar {
             height: 4px !important; }
   #resume .container {
     padding: 20px !important; }
@@ -100,6 +121,57 @@ h1, h2, h3, h4, h5, h6 {
         padding: 20px !important; }
         .contact .container .formule .form-row .col-Form {
           width: 100% !important; } }
+
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+  color: white; }
+
+.nav-menu .active > a::before {
+  visibility: visible;
+  width: 25px; }
+
+.nav-menu a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #18d26e;
+  transition: all 0.3s ease-in-out 0s; }
+
+#header.header-top {
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9); }
+
+#header.header-top .container {
+  display: flex;
+  align-items: center; }
+
+#header.header-top h1 {
+  margin-right: auto;
+  font-size: 36px; }
+
+#header.header-top .social-links,
+#header.header-top h2 {
+  display: none; }
+
+#header.header-top .nav-menu {
+  margin: 0; }
 
 .container {
   width: 100%;
@@ -153,7 +225,7 @@ h1, h2, h3, h4, h5, h6 {
       list-style: none; }
       .header .nav-menu ul li + li {
         margin-left: 30px; }
-        .header .nav-menu ul li + li .active > a:before {
+        .header .nav-menu ul li + li .active > a::before {
           visibility: visible;
           width: 25px; }
         .header .nav-menu ul li + li a {
@@ -164,18 +236,7 @@ h1, h2, h3, h4, h5, h6 {
           font-family: "Poppins", sans-serif;
           font-weight: 400; }
         .header .nav-menu ul li + li a:hover {
-          color: #18d26e; }
-        .header .nav-menu ul li + li a:before {
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 2px;
-          bottom: -4px;
-          left: 0;
-          background-color: #18d26e;
-          visibility: hidden;
-          width: 0px;
-          transition: all 0.3s ease-in-out 0s; }
+          color: white; }
   .header .social-links {
     margin-top: 40px;
     display: flex; }
@@ -221,13 +282,13 @@ h1, h2, h3, h4, h5, h6 {
   background: #4ceb95;
   margin: 4px 10px; }
 
-.about .about-me .row, .about .about-me .row .col-text .row, .about .skills .row, #resume .container .row, .contact .container .row, .contact .container .formule .form-row {
+.about .about-me .row, .about .about-me .row .col-text .row, .about .skills .row-skills, #resume .container .row, .contact .container .row, .contact .container .formule .form-row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px; }
 
-.about .about-me .row .col-img, .about .about-me .row .col-text, .about .about-me .row .col-text .row .col-lg, .about .skills .row .col-skill, #resume .container .row .col-resume, .contact .container .row .col-contact, .contact .container .formule .form-row .col-Form {
+.about .about-me .row .col-img, .about .about-me .row .col-text, .about .about-me .row .col-text .row .col-lg, .about .skills .row-skills .col-skill, #resume .container .row .col-resume, .contact .container .row .col-contact, .contact .container .formule .form-row .col-Form {
   position: relative;
   padding-right: 15px;
   padding-left: 15px; }
@@ -311,9 +372,9 @@ h1, h2, h3, h4, h5, h6 {
 .about .skills {
   background: rgba(0, 0, 0, 0.9);
   padding: 17px 145px; }
-  .about .skills .row .col-skill {
+  .about .skills .row-skills .col-skill {
     width: 50%; }
-    .about .skills .row .col-skill .progress {
+    .about .skills .row-skills .col-skill .progress {
       height: 50px;
       display: block;
       background: none;
@@ -321,7 +382,7 @@ h1, h2, h3, h4, h5, h6 {
       line-height: 0;
       font-size: .75rem;
       border-radius: .25rem; }
-      .about .skills .row .col-skill .progress .skill {
+      .about .skills .row-skills .col-skill .progress .skill {
         padding: 10px 0;
         margin: 0 0 6px 0;
         text-transform: uppercase;
@@ -329,12 +390,12 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 600;
         font-family: "Poppins", sans-serif;
         color: #fff; }
-        .about .skills .row .col-skill .progress .skill .val {
+        .about .skills .row-skills .col-skill .progress .skill .val {
           float: right;
           font-style: normal; }
-      .about .skills .row .col-skill .progress .progress-bar-wrap {
+      .about .skills .row-skills .col-skill .progress .progress-bar-wrap {
         background: rgba(255, 255, 255, 0.15); }
-        .about .skills .row .col-skill .progress .progress-bar-wrap .progress-bar {
+        .about .skills .row-skills .col-skill .progress .progress-bar-wrap .progress-bar {
           height: 10px;
           transition: .9s;
           background-color: #18d26e; }
@@ -398,9 +459,10 @@ h1, h2, h3, h4, h5, h6 {
 #portfolio {
   color: white !important;
   background: rgba(0, 0, 0, 0.9) !important;
-  margin: 60px;
+  margin: 71px auto !important;
   padding: 30px;
-  transition: ease-in-out 0.3s; }
+  transition: ease-in-out 0.3s !important;
+  max-width: 1140px !important; }
   #portfolio .container .portfolio-title {
     padding: 15px; }
     #portfolio .container .portfolio-title h2 {
