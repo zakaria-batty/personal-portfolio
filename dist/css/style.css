@@ -459,7 +459,7 @@ h6 {
 #portfolio {
   color: white !important;
   background: rgba(0, 0, 0, 0.9) !important;
-  margin: 71px auto !important;
+  margin: 0 68px !important;
   padding: 30px;
   transition: ease-in-out 0.3s !important;
   max-width: 1140px !important; }
