@@ -54,7 +54,7 @@ $data = mysqli_fetch_array($queryrun);
 
 <body>
   <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Hye, <?= $_SESSION['username'] ?></a>
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Dashboard</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -67,39 +67,39 @@ $data = mysqli_fetch_array($queryrun);
 
   <div class="container-fluid">
     <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse text-white">
         <div class="sidebar-sticky pt-3">
           <ul class="nav flex-column">
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-white">
               <span>Setup/Edit</span>
 
             </h6>
             <li class="nav-item">
-              <a class="nav-link" href="../admin/">
+              <a class="nav-link  text-white" href="../admin/">
                 <span data-feather="home"></span>
                 Home
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="?edithome=true">
+              <a class="nav-link  text-white" href="?edithome=true">
                 <span data-feather="home"></span>
                 Edit Home
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="?editabout=true">
+              <a class="nav-link  text-white" href="?editabout=true">
                 <span data-feather="info"></span>
                 Edit About
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="?editresume=true">
+              <a class="nav-link  text-white" href="?editresume=true">
                 <span data-feather="briefcase"></span>
                 Edit Resume
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="?editportfolio=true">
+              <a class="nav-link text-white" href="?editportfolio=true">
                 <span data-feather="archive"></span>
                 Edit Portfolio
               </a>
@@ -107,14 +107,14 @@ $data = mysqli_fetch_array($queryrun);
 
           </ul>
 
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-white">
             <span>Account Settings</span>
-            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+            <a class="d-flex align-items-center text-white" href="#" aria-label="Add a new report">
             </a>
           </h6>
           <ul class="nav flex-column mb-2">
             <li class="nav-item">
-              <a class="nav-link" href="?editprofile=true">
+              <a class="nav-link text-white" href="?editprofile=true">
                 <span data-feather="user"></span>
                 Edit Profile
               </a>
@@ -164,7 +164,7 @@ $data = mysqli_fetch_array($queryrun);
             <input type="submit" name="uprofile" class="btn btn-primary" value="Save Changes">
           </form>
         <?php } else {
-          include('php/welcome.php');
+          include('php/home.php'); //home
         } ?>
 
       </main>

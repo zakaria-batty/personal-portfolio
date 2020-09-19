@@ -36,15 +36,16 @@ $Call = mysqli_fetch_array($runquery);
         <div class="container">
 
             <h1><a href="index.html"><?= $Call['name'] ?></a></h1>
-            <h2>I'm developper <span>graphic designer</span> from morroc</h2>
+            <h2>I'm developper <span>graphic designer</span> PHP Developer</h2>
+            
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li id="Home_menu" class="active"><a href="#header">Home</a></li>
-                    <li id="about_menu"><a href="#about">About</a></li>
-                    <li id="resume_menu"><a href="#resume">Resume</a></li>
-                    <li id="portfolio_menu"><a href="#portfolio">Portfolio</a></li>
-                    <li id="contact_menu"><a href="#contact">Contact</a></li>
+                    <li onclick="Evnt('Home')" class="active"><a href="#header">Home</a></li>
+                    <li onclick="Evnt('About')"><a href="#about">About</a></li>
+                    <li onclick="Evnt('Resume')"><a href="#resume">Resume</a></li>
+                    <li onclick="Evnt('Portfolio')"><a href="#portfolio">Portfolio</a></li>
+                    <li onclick="Evnt('Contact')"><a href="#contact">Contact</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
 
@@ -69,7 +70,7 @@ $Call = mysqli_fetch_array($runquery);
 
             <div class="row">
                 <div class="col-img">
-                    <img src="dist/img/me.jpg" class="img-fluid" alt="">
+                    <img src="dist/img/prfl.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-text">
                     <h3><?= $Call["heading"] ?></h3>
@@ -326,9 +327,7 @@ $Call = mysqli_fetch_array($runquery);
     </section>
     <!-- End Contact Section -->
 
-    <div class="credits">
-        Designed by <a href="">BootstrapMade</a>
-    </div>
+    <
 
 
     <script src="dist/js/main.js"></script>
