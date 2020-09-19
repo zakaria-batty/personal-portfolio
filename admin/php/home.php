@@ -18,7 +18,7 @@ if (isset($_GET['msg'])) {
   }
 }
 ?>
-<form method="post" action="php/uhome.php" enctype="multipart/form-data">
+<form class="formule" method="post" action="php/uhome.php" enctype="multipart/form-data">
   <div class="form-row">
     <!-- <div class="form-group col-md-6">
       <img src="../dist/img/" class="oo img-thumbnail"><br>

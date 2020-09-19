@@ -18,7 +18,7 @@
     }
   }
   ?>
- <form method="post" action="php/uportfolio.php" enctype="multipart/form-data">
+ <form  class="formule" method="post" action="php/uportfolio.php" enctype="multipart/form-data">
    <div class="form-row">
      <div class="form-group col-md-6">
        <label>Project Screenshot/Image (Minimum 600px X 600px, Maxsize 2mb)</label>
@@ -44,7 +44,7 @@
      </div>
 
  </form>
- <table class="table table-striped table-sm">
+ <table class="table table-striped table-sm formule">
    <thead>
      <tr>
        <th>Id</th>
@@ -112,7 +112,7 @@
          <td><img src="../dist/img/portfolio/<?= $data2['projectpic'] ?>" class="oo img-thumbnail"></td>
          <td><?= $data2['projectname'] ?></td>
          <td>
-           <a href="<?= $data2['projectlink'] ?>"> <button type="button" class="btn btn-success btn-sm">Visit</button></a>
+           <!-- <a href="<?= $data2['projectlink'] ?>"> <button type="button" class="btn btn-success btn-sm">Visit</button></a> -->
 
            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal<?= $data2['id'] ?>">
              Edit

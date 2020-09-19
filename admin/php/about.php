@@ -11,7 +11,7 @@ if (isset($_GET['msg'])) {
   }
 }
 ?>
-<form method="post" action="php/uabout.php">
+<form  class="formule" method="post" action="php/uabout.php">
   <div class="form-row">
     <input type="hidden" name="id" value="<?= $data['id'] ?>">
     <div class="form-group col-md-12">
@@ -66,7 +66,7 @@ if (isset($_GET['msg'])) {
 <hr>
 <h4 ID="skillsection">Manage Skills</h4>
 
-<table class="table table-striped table-sm">
+<table class="table table-striped table-sm formule" style="color: white;">
   <thead>
     <tr>
       <th>Id</th>
@@ -127,7 +127,7 @@ if (isset($_GET['msg'])) {
     } ?>
   </tbody>
 </table>
-<form action="php/supdate.php" method="post">
+<form  class="formule" action="php/supdate.php" method="post">
   <div class="form-row">
     <div class="form-group col-md-5">
       <label for="sn">Skill Name</label>

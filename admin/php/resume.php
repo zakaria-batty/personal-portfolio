@@ -11,7 +11,7 @@ if (isset($_GET['msg'])) {
   }
 }
 ?>
-<form action="php/uresume.php" method="post">
+<form  class="formule" action="php/uresume.php" method="post">
   <div class="form-row">
     <div class="form-group col-md-4">
       <label>Select Category</label>
@@ -43,7 +43,7 @@ if (isset($_GET['msg'])) {
   </div>
 </form>
 
-<table id="rlist" class="table table-striped table-sm .table-responsive ">
+<table id="rlist" class="table table-striped table-sm .table-responsive formule ">
   <thead>
     <tr>
       <th>Id</th>
