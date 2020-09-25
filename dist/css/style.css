@@ -11,12 +11,12 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url(../img/bg.jpg) top right no-repeat;
+  background: #040404 url("../img/bg.jpg") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
   top: 0;
-  height: 100vh;
+  height: 100%;
   z-index: -1; }
 
 .sect {
@@ -121,6 +121,18 @@ h6 {
         padding: 20px !important; }
         .contact .container .formule .form-row .col-Form {
           width: 100% !important; } }
+
+@media screen and (max-width: 991px) {
+  .about .about-me .row .col-img {
+    width: 100% !important; }
+  .about .about-me .row .col-text {
+    width: 100% !important; }
+  .about .about-me .row p {
+    font-size: 14px !important; }
+  .about .skills {
+    padding: 13px !important; }
+  #contact .container .row .col-contact {
+    width: 100% !important; } }
 
 .mobile-nav-toggle {
   position: fixed;
@@ -484,8 +496,19 @@ h6 {
       margin: 4px 10px; }
   #portfolio .container .row .row-cols-1 .col .card {
     background: #f3f2f23b !important; }
-    #portfolio .container .row .row-cols-1 .col .card .card-body .card-footer {
-      background: #6d6b6b5c; }
+    #portfolio .container .row .row-cols-1 .col .card .p-3 {
+      text-decoration: none;
+      color: white;
+      padding: 4px 12px; }
+    #portfolio .container .row .row-cols-1 .col .card .card-body {
+      padding: 2px !important;
+      text-align: center !important; }
+      #portfolio .container .row .row-cols-1 .col .card .card-body a .btn-dark {
+        color: #fff;
+        background-color: #343a40;
+        border-color: #343a40;
+        padding: 7px 40px !important;
+        margin-left: -4px !important; }
 
 .contact {
   transition: ease-in-out 0.3s; }
@@ -606,3 +629,45 @@ h6 {
     .contact .credits a {
       color: #18d26e;
       transition: 0.3s; }
+
+.mobile-nav * {
+  margin: 0;
+  padding: 11px;
+  list-style: none; }
+
+.mobile-nav {
+  position: fixed;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  z-index: 9999;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.7);
+  transition: ease-in-out 0.2s;
+  border-radius: 10px;
+  padding: 10px 0;
+  border: 2px solid rgba(255, 255, 255, 0.12); }
+  .mobile-nav ul .active {
+    color: #18d26e;
+    opacity: 1;
+    visibility: visible; }
+  .mobile-nav ul li {
+    list-style: none !important; }
+    .mobile-nav ul li a {
+      text-decoration: none !important;
+      color: white; }
+    .mobile-nav ul li a:hover {
+      color: #18d26e; }
+
+.mobile-nav-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(9, 9, 9, 0.6);
+  overflow: hidden;
+  display: block;
+  transition: ease-in-out 0.2s; }

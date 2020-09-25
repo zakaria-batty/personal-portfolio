@@ -4,7 +4,7 @@ if (!isset($_SESSION['username'])) {
   header('location:login/');
 }
 include('../include/db.php');
-$query = "SELECT * FROM personal_setup,about,basic_setup,admin";
+$query = "SELECT * FROM personal_setup,about,admin";
 $queryrun = mysqli_query($db, $query);
 $data = mysqli_fetch_array($queryrun);
 ?>

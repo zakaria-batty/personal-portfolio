@@ -6,7 +6,7 @@ $query = "SELECT * FROM personal_setup";
 $queryrun = mysqli_query($db, $query);
 $data = mysqli_fetch_array($queryrun);
 
-$target_dir = "../../dist/img/portfolio/";
+$target_dir = "../../dist/img/";
 
 if (isset($_POST['save'])) {
 

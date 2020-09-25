@@ -37,20 +37,14 @@ $Call = mysqli_fetch_array($runquery);
 
             <h1><a href="index.html"><?= $Call['name'] ?></a></h1>
             <h2>I'm developper <span>graphic designer</span> PHP Developer</h2>
-            
+
 
             <nav class="nav-menu d-none d-lg-block">
-                <ul>
-                    <li onclick="Evnt('Home')" class="active"><a href="#header">Home</a></li>
-                    <li onclick="Evnt('About')"><a href="#about">About</a></li>
-                    <li onclick="Evnt('Resume')"><a href="#resume">Resume</a></li>
-                    <li onclick="Evnt('Portfolio')"><a href="#portfolio">Portfolio</a></li>
-                    <li onclick="Evnt('Contact')"><a href="#contact">Contact</a></li>
-                </ul>
+                <?php include("include/navbar.php"); ?>
             </nav><!-- .nav-menu -->
 
             <div class="social-links">
-                <?php include("social-media/social.php"); ?>
+                <?php include("include/social.php"); ?>
             </div>
 
         </div>
@@ -70,7 +64,7 @@ $Call = mysqli_fetch_array($runquery);
 
             <div class="row">
                 <div class="col-img">
-                    <img src="dist/img/prfl.jpg" class="img-fluid" alt="">
+                    <img src="dist/img/<?= $Call['profilepic'] ?>" class="img-fluid" alt="">
                 </div>
                 <div class="col-text">
                     <h3><?= $Call["heading"] ?></h3>
@@ -199,59 +193,22 @@ $Call = mysqli_fetch_array($runquery);
                     while ($data = mysqli_fetch_array($runquery)) {
                     ?>
                         <div class="col mb-4">
-                            <a href="#" data-toggle="modal" data-target="#Modal<?= $data['id'] ?>" data-whatever="@mdo">
-                                <div class="card h-100" id="card">
-                                    <img src="dist/img/portfolio/<?= $data['projectpic'] ?>" class="card-img-top" alt="img project" style="height: 228px;">
-                                    <div class="card-body">
-                                        <div class="card-footer">
-                                            <a class="card-text lead p-2"><?= $data['projectname'] ?></a>
-                                        </div>
-                                    </div>
+                            <div class="card h-100" id="card">
+                                <p class="card-text p-3"><?= $data['projectname'] ?></p>
+                                <img src="dist/img/portfolio/<?= $data['projectpic'] ?>" class="card-img-top" alt="img project" style="height: 228px;">
+                                <div class="card-body">
+                                    <a href="<?= $data['projectlink'] ?>" class="btn btn-dark"><i class="icofont-views" style="color: #28a745;">Preview</i></a>
+                                    <a href="https://github.com/zakaria-batty" class="btn btn-dark"> <i class="icofont-download" style="color: #007bff;"> Download</i> </a>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     <?php
                     }
                     ?>
                 </div>
-                <?php
-                $query5 = "SELECT * FROM portfolio";
-                $runquery5 = mysqli_query($db, $query5);
-                while ($data = mysqli_fetch_array($runquery5)) {
-                ?>
-                    <div class="modal fade" id="Modal<?= $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div>
-                                        <img src="dist/img/portfolio/<?= $data['projectpic'] ?>" class="card-img-top" alt="...">
-                                        <div>
-                                            <h5 class="modal-title"><?= $data['projectname'] ?></h5>
-                                            <p class="modal-text">Some quick example text to build on the card title and
-                                                make
-                                                up the bulk of the card's content.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <a href="<?= $data['projectlink'] ?>" class="btn btn-success ">Preview</a>
-                                    <a href="https://github.com/zakaria-batty" class="btn btn-primary">Download</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php
-                }
-                ?>
             </div>
         </div>
-    </section><!-- End Portfolio Section -->
+    </section>
     <!-- End Portfolio Section -->
 
     <!-- ======= Contact Section ======= -->
@@ -278,7 +235,7 @@ $Call = mysqli_fetch_array($runquery);
                         <i class="bx icofont-share-alt"></i>
                         <h3>Social Profiles</h3>
                         <div class="social-links">
-                            <?php include("social-media/social.php"); ?>
+                            <?php include("include/social.php"); ?>
                         </div>
                     </div>
                 </div>
@@ -326,10 +283,12 @@ $Call = mysqli_fetch_array($runquery);
         </div>
     </section>
     <!-- End Contact Section -->
+    <!-- ---mobile-nav---- -->
+    <nav class="mobile-nav " style="display: none;">
+        <?php include("include/navbar.php"); ?>
+    </nav>
 
-    <
-
-
+    <div class="mobile-nav-overly" style="display: none;"></div>
     <script src="dist/js/main.js"></script>
 </body>
 

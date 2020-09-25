@@ -38,9 +38,23 @@
                     .card {
                         background: #f3f2f23b !important;
 
+                        .p-3 {
+                            text-decoration: none;
+                            color: white;
+                            padding: 4px 12px;
+                        }
+
                         .card-body {
-                            .card-footer {
-                                background: #6d6b6b5c;
+                            padding: 2px !important;
+                            text-align: center !important;
+                            a{
+                                .btn-dark {
+                                    color: #fff;
+                                    background-color: #343a40;
+                                    border-color: #343a40;
+                                    padding: 7px 40px !important;
+                                    margin-left: -4px !important;
+                                }
                             }
                         }
                     }

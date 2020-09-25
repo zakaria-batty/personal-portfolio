@@ -7,8 +7,8 @@
         ;
     }
 
-    @if $breakpoint==tab-port {
-        @media screen and (max-width: 1000px) {
+    @if $breakpoint==tab {
+        @media screen and (max-width: 991px) {
             @content
         }
 
@@ -180,25 +180,38 @@
 
 ;
 
-@include responsive(tab-porte) {
+@include responsive(tab) {
 
     //  about
-    .about-me {
+    .about {
+        .about-me {
 
-        .row {
-            .col-img {
-                width: 100% !important;
+            .row {
+                .col-img {
+                    width: 100% !important;
+                }
+
+                .col-text {
+                    width: 100% !important;
+                }
+
+                p {
+                    font-size: 14px !important;
+                }
             }
+        }
 
-            .col-text {
-                width: 100% !important;
-            }
-
-            p {
-                font-size: 14px !important;
+        .skills {
+            padding: 13px !important;
+        }
+    }
+    #contact{
+        .container{
+            .row{
+                .col-contact{
+                    width: 100% !important;
+                }
             }
         }
     }
-}
-
-;
+};
